@@ -29,24 +29,31 @@ You can view the live demo of the project here:
    ```bash
    git clone https://github.com/your-username/encoding-challenge.git
    cd encoding-challenge
+    ```
 
 2. Install the project dependencies:
     ```bash
     npm install
+    ```
 
 ## Running the App
 
 To start the app in development mode, use the following command:
-    ```bash
-    npm start
+
+```bash
+npm start
+```
+
 
 This will run the app in development mode. Open http://localhost:3000 to view it in your browser. The page will reload if you make edits.
 
 ## Running Tests
 
 This project includes test cases to verify the correctness of the encoding function. To run the tests, use the following command:
-    ```bash
-    npm test
+
+```bash
+npm test
+```
 
 This will execute the test suite, verifying that the encodeBlock function behaves as expected based on the provided example cases.
 
@@ -88,4 +95,4 @@ These are some example cases that are verified by the test suite:
 
 ## License
 
-This project is licensed under the MIT License. You can find the full license text in the `LICENSE` file.
+This project is licensed under the MIT License.
