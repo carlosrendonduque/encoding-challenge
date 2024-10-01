@@ -4,6 +4,12 @@
 
 This project is a simple React app that encodes a block of text (up to 4 characters) into a 32-bit integer using a custom encoding scheme. The goal is to implement an algorithm that scrambles the bits of the input string and maps them into a 32-bit integer format, as per the challenge specifications.
 
+## Live Demo
+
+You can view the live demo of the project here:  
+[https://carlosrendonduque.github.io/encoding-challenge](https://carlosrendonduque.github.io/encoding-challenge)
+
+
 ## Project Structure
 
 - **src/components/EncodeBlock.js**: The main React component that handles the user input and displays the encoded value.
