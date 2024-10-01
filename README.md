@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Encoding Challenge - React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a simple React app that encodes a block of text (up to 4 characters) into a 32-bit integer using a custom encoding scheme. The goal is to implement an algorithm that scrambles the bits of the input string and maps them into a 32-bit integer format, as per the challenge specifications.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+- **src/components/EncodeBlock.js**: The main React component that handles the user input and displays the encoded value.
+- **src/utils/encodeUtils.js**: Contains the utility function that performs the encoding logic.
+- **src/utils/encodeUtils.test.js**: Test cases for the encoding function to ensure correct behavior.
+- **public/**: Static files used for rendering the React app.
+- **README.md**: Project documentation (this file).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+- You must have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org).
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/encoding-challenge.git
+   cd encoding-challenge
 
-### `npm run build`
+2. Install the project dependencies:
+    ```bash
+    npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the App
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To start the app in development mode, use the following command:
+    ```bash
+    npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will run the app in development mode. Open http://localhost:3000 to view it in your browser. The page will reload if you make edits.
 
-### `npm run eject`
+## Running Tests
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project includes test cases to verify the correctness of the encoding function. To run the tests, use the following command:
+    ```bash
+    npm test
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This will execute the test suite, verifying that the encodeBlock function behaves as expected based on the provided example cases.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Example Test Cases
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+These are some example cases that are verified by the test suite:
 
-## Learn More
+| Raw Characters | Encoded Value (decimal) |
+| -------------- | ----------------------- |
+| "foo"          | 124807030                |
+| " foo"         | 250662636                |
+| "foot"         | 267939702                |
+| "BIRD"         | 251930706                |
+| "...."         | 15794160                 |
+| "^^^^"         | 252706800                |
+| "Woot"         | 266956663                |
+| "no"           | 53490482                 |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Code Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **src/components/EncodeBlock.js**: Contains the main React component that handles user input and displays the encoded value.
+- **src/utils/encodeUtils.js**: Holds the encoding logic as a utility function (`encodeBlock`), which converts a 4-character block of text into a 32-bit integer.
+- **src/utils/encodeUtils.test.js**: Contains unit tests to validate the `encodeBlock` function against example cases.
+- **public/**: Static files used for rendering the React app.
+- **README.md**: Project documentation (this file).
 
-### Code Splitting
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **React**: For building the user interface and managing component state.
+- **Jest**: For testing the encoding logic with unit tests to ensure it produces the correct output.
+- **CSS**: For styling the app in a separate `.css` file.
 
-### Analyzing the Bundle Size
+## Next Steps and Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Decoding Function**: Implement a function to decode the 32-bit integer back into the original text.
+- **Error Handling**: Add more robust error handling for cases where input is invalid (e.g., more than 4 characters).
+- **UI Improvements**: Enhance the user interface with additional styling or interactivity.
+- **Performance Optimization**: Investigate performance optimizations for handling larger datasets or repeated encoding operations.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. You can find the full license text in the `LICENSE` file.
