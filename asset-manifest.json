@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/encoding-challenge/static/css/main.58801378.css",
+    "main.js": "/encoding-challenge/static/js/main.877a2a30.js",
+    "index.html": "/encoding-challenge/index.html",
+    "main.58801378.css.map": "/encoding-challenge/static/css/main.58801378.css.map",
+    "main.877a2a30.js.map": "/encoding-challenge/static/js/main.877a2a30.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58801378.css",
+    "static/js/main.877a2a30.js"
+  ]
+}
