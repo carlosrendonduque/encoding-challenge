@@ -1,25 +1,24 @@
 /* src/components/EncodeBlock.css */
 
 .container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .input {
-    padding: 10px;
-    font-size: 1.2rem;
-    width: 400px;
-  }
-  
-  .button {
-    padding: 10px;
-    margin-left: 10px;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .result {
-    font-size: 1.2rem;
-    color: #282c34;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 400px;
+}
+
+.button {
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 1.2rem;
+  color: #282c34;
+}

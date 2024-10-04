@@ -2,19 +2,23 @@
 
 ## Overview
 
-This project is a simple React app that encodes a block of text (up to 4 characters) into a 32-bit integer using a custom encoding scheme. The goal is to implement an algorithm that scrambles the bits of the input string and maps them into a 32-bit integer format, as per the challenge specifications.
+This project is a React app that encodes text using two different schemes:
+
+1. **Part 1**: Encodes a block of text (up to 4 characters) into a 32-bit integer using a custom encoding scheme.
+2. **Part 2**: Encodes and decodes full strings into arrays of 32-bit integers, then decodes them back to the original string.
+
+The goal is to implement algorithms that scramble and restore bits of input strings, mapping them into and out of a 32-bit integer format.
 
 ## Live Demo
 
 You can view the live demo of the project here:  
 [https://carlosrendonduque.github.io/encoding-challenge](https://carlosrendonduque.github.io/encoding-challenge)
 
-
 ## Project Structure
 
 - **src/components/EncodeBlock.js**: The main React component that handles the user input and displays the encoded value.
-- **src/utils/encodeUtils.js**: Contains the utility function that performs the encoding logic.
-- **src/utils/encodeUtils.test.js**: Test cases for the encoding function to ensure correct behavior.
+- **src/utils/encodeUtils.js**: Contains utility functions that perform the encoding/decoding logic.
+- **src/utils/encodeUtils.test.js**: Test cases for both encoding and decoding functions.
 - **public/**: Static files used for rendering the React app.
 - **README.md**: Project documentation (this file).
 
@@ -47,9 +51,17 @@ npm start
 
 This will run the app in development mode. Open http://localhost:3000 to view it in your browser. The page will reload if you make edits.
 
+
+## Switching Between Part 1 and Part 2
+
+The app provides buttons to switch between Part 1 (4-character block encoding) and Part 2 (full string encoding and decoding). Simply click the respective button to switch modes.
+
+- **Part 1**: Encodes blocks of 4 characters to a 32-bit integer.
+- **Part 2**: Encodes a full string to an array of 32-bit integers and decodes it back to the original string.
+
 ## Running Tests
 
-This project includes test cases to verify the correctness of the encoding function. To run the tests, use the following command:
+This project includes test cases to verify the correctness of both the encoding and decoding functions. To run the tests, use the following command:
 
 ```bash
 npm test
@@ -59,7 +71,7 @@ This will execute the test suite, verifying that the encodeBlock function behave
 
 ## Example Test Cases
 
-These are some example cases that are verified by the test suite:
+### Part 1: 4-character Block Encoding
 
 | Raw Characters | Encoded Value (decimal) |
 | -------------- | ----------------------- |
@@ -72,13 +84,27 @@ These are some example cases that are verified by the test suite:
 | "Woot"         | 266956663                |
 | "no"           | 53490482                 |
 
+### Part 2: Full String Encoding and Decoding
+
+| Raw String                                   | Encoded Value (decimal)                                                     |
+| ---------------------------------------------| --------------------------------------------------------------------------- |
+| "tacocat"	                                   | [267487694, 125043731]                                                      |
+| "never odd or even"                          | [267657050, 233917524, 234374596, 250875466, 17830160]                      |
+| "lager, sir, is regal"                       | [267394382, 167322264, 66212897, 200937635, 267422503]                      |
+| "go hang a salami, I'm a lasagna hog"        | [200319795, 133178981, 234094669, 267441422, 78666124, ...]                 |
+| "egad, a base tone denotes a bad age"        | [267389735, 82841860, 267651166, 250793668, 233835785, ...]                 |
+
+ 
+
 ## Code Structure
 
 - **src/components/EncodeBlock.js**: Contains the main React component that handles user input and displays the encoded value.
-- **src/utils/encodeUtils.js**: Holds the encoding logic as a utility function (`encodeBlock`), which converts a 4-character block of text into a 32-bit integer.
-- **src/utils/encodeUtils.test.js**: Contains unit tests to validate the `encodeBlock` function against example cases.
+- **src/utils/encodeUtils.js**: Holds the encoding and decoding logic as utility functions (encodeBlock, encode, decode).
+- **src/utils/encodeUtils.test.js**: Contains unit tests to validate the encoding/decoding functions.
 - **public/**: Static files used for rendering the React app.
 - **README.md**: Project documentation (this file).
+
+
 
 ## Technologies Used
 
@@ -88,10 +114,8 @@ These are some example cases that are verified by the test suite:
 
 ## Next Steps and Future Enhancements
 
-- **Decoding Function**: Implement a function to decode the 32-bit integer back into the original text.
-- **Error Handling**: Add more robust error handling for cases where input is invalid (e.g., more than 4 characters).
-- **UI Improvements**: Enhance the user interface with additional styling or interactivity.
 - **Performance Optimization**: Investigate performance optimizations for handling larger datasets or repeated encoding operations.
+- **UI Improvements**: Further enhance the UI to make it more user-friendly.
 
 ## License
 
