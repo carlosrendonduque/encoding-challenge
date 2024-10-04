@@ -7,14 +7,21 @@ const EncodeBlock = () => {
   const [inputText, setInputText] = useState('');
   const [encodedValue, setEncodedValue] = useState(null);
   const [decodedValue, setDecodedValue] = useState('');
+  const [errorMessage, setErrorMessage] = useState(''); // Error message state
   const [challengePart, setChallengePart] = useState(1); // Default to Part 1
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
+    setErrorMessage(''); // Clear error message on input change
   };
 
   const handleEncode = () => {
     setDecodedValue(''); // Clear the decoded value when encoding
+
+    if (inputText.trim() === '') {
+      setErrorMessage('Please enter some text to encode.'); // Show error if no input
+      return;
+    }
 
     if (challengePart === 1) {
       const encoded = encodeBlock(inputText.slice(0, 4)); // Part 1 logic: only take first 4 characters
@@ -37,11 +44,26 @@ const EncodeBlock = () => {
     setInputText('');
     setEncodedValue(null);
     setDecodedValue('');
+    setErrorMessage(''); // Clear error message on part switch
   };
 
   return (
     <div className="container">
+      {/* Art+Logic logo */}
+      <img
+        src={`${process.env.PUBLIC_URL}/artLogic-logo.webp`}
+        alt="Art+Logic Logo"
+        className="logo"
+      />
+
       <h1>Encoding Challenge</h1>
+
+      {/* Butterfly image */}
+      <img
+        src={`${process.env.PUBLIC_URL}/butterfly-full.webp`}
+        alt="Butterfly"
+        className="butterfly-image"
+      />
 
       <div>
         <button onClick={() => handlePartSwitch(1)} className="button">
@@ -67,6 +89,8 @@ const EncodeBlock = () => {
       <button onClick={handleEncode} className="button">
         Encode
       </button>
+
+      {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Show error message */}
 
       {encodedValue && (
         <div className="result">

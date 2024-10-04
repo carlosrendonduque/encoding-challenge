@@ -1,24 +1,100 @@
 /* src/components/EncodeBlock.css */
 
+/* General Container */
+/* General Container */
 .container {
   text-align: center;
   padding: 20px;
+  font-family: 'Arial', sans-serif; /* Clean and simple font */
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 8px; /* Soft corners */
+  max-width: 500px;
+  margin: 0 auto; /* Center container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
+/* Input Field */
 .input {
-  padding: 10px;
-  font-size: 1.2rem;
-  width: 400px;
+  padding: 12px;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Light border for a clean look */
+  border-radius: 5px; /* Slightly rounded corners */
+  margin-bottom: 20px; /* Space under input */
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
+.input:focus {
+  border-color: #007bff; /* Blue highlight on focus */
+}
+
+/* Buttons */
 .button {
-  padding: 10px;
-  margin-left: 10px;
-  font-size: 1.2rem;
+  padding: 12px 20px;
+  margin: 5px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #007bff; /* Professional blue color */
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* Results */
 .result {
   font-size: 1.2rem;
-  color: #282c34;
+  color: #343a40; /* Darker gray for text */
+  background-color: #e9ecef; /* Light gray background for contrast */
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Error Message */
+.error-message {
+  color: red; /* Red color for error text */
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Logo Image */
+.logo {
+  width: 100%;
+  max-width: 180px; /* Adjust logo size */
+  margin: 10px auto;
+  display: block;
+}
+
+/* Butterfly Image */
+.butterfly-image {
+  width: 100%;
+  max-width: 250px; /* Adjust butterfly size */
+  margin: 20px auto;
+  display: block;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+  .button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .input {
+    margin-bottom: 15px;
+  }
+
+  .container {
+    padding: 15px;
+  }
 }
