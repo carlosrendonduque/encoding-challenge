@@ -11,8 +11,15 @@ const EncodeBlock = () => {
   const [challengePart, setChallengePart] = useState(1); // Default to Part 1
 
   const handleInputChange = (e) => {
-    setInputText(e.target.value);
+    const input = e.target.value;
+    setInputText(input);
     setErrorMessage(''); // Clear error message on input change
+
+    if (input === '') {
+      // Clear encoded and decoded values if input is cleared
+      setEncodedValue(null);
+      setDecodedValue('');
+    }
   };
 
   const handleEncode = () => {
