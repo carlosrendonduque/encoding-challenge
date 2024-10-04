@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/encoding-challenge/static/css/main.58801378.css",
-    "main.js": "/encoding-challenge/static/js/main.a7f21665.js",
+    "main.css": "/encoding-challenge/static/css/main.845a3315.css",
+    "main.js": "/encoding-challenge/static/js/main.724e82cb.js",
     "index.html": "/encoding-challenge/index.html",
-    "main.58801378.css.map": "/encoding-challenge/static/css/main.58801378.css.map",
-    "main.a7f21665.js.map": "/encoding-challenge/static/js/main.a7f21665.js.map"
+    "main.845a3315.css.map": "/encoding-challenge/static/css/main.845a3315.css.map",
+    "main.724e82cb.js.map": "/encoding-challenge/static/js/main.724e82cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.58801378.css",
-    "static/js/main.a7f21665.js"
+    "static/css/main.845a3315.css",
+    "static/js/main.724e82cb.js"
   ]
 }
